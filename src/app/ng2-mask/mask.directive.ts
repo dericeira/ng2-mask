@@ -1,6 +1,6 @@
 import {
   Directive, ElementRef, forwardRef, HostListener, Inject, Input, OnInit,
-  Renderer2
+  Renderer
 } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -36,7 +36,7 @@ export class MaskDirective implements OnInit, ControlValueAccessor {
 
   public constructor(
     private _elementRef: ElementRef,
-    private _renderer: Renderer2,
+    private _renderer: Renderer,
     @Inject(DOCUMENT) private document: Document
   ) {
     this.modelWithSpecialCharacters = true;
